@@ -19,6 +19,7 @@ define Device/linksys_mr7350
 	PAGESIZE := 2048
        KERNEL_SIZE := 8192k
 	SOC := ipq6018
+	UBINIZE_OPTS := -E 5
 	IMAGES += factory.bin
 	IMAGE/factory.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | \
 		append-ubi | linksys-image type=MR7350
