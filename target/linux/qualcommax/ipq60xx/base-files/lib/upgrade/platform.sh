@@ -41,6 +41,7 @@ platform_do_upgrade() {
 			CI_UBIPART="alt_rootfs"
 		else
 			fw_setenv boot_part 1
+   			CI_KERNPART="kernel"
 			CI_UBIPART="rootfs"
 		fi
 		fw_setenv boot_part_ready 3
